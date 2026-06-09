@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CondoNotify</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color"  content="#1e293b">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🏢 CondoNotify</h1>
+
+        <p>Sistema de Comunicação Condominial</p>
+
+        <!-- LOGIN -->
+
+        <div id="login">
+
+            <h2>Login do Porteiro</h2>
+
+            <input
+                type="text"
+                id="usuario"
+                placeholder="Usuário">
+
+            <input
+                type="password"
+                id="senha"
+                placeholder="Senha">
+
+            <button onclick="login()">
+                Entrar
+            </button>
+
+        </div>
+
+        <!-- DASHBOARD -->
+
+        <div id="dashboard" style="display: none;">
+
+            <h2 id="nomePorteiro">
+                👋 Bem-vindo
+            </h2>
+
+            <p id="turnoPorteiro">Painel do Porteiro</p>
+
+            <div class="card-info">
+
+                <h3>📬 Mensagens Hoje</h3>
+
+                <span id="contadorMensagens">0</span>
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>🏢 Blocos</h3>
+
+                <span>5</span>
+
+            </div>
+
+            <div class="card-info">
+
+                <h3>🚪 Apartamentos</h3>
+
+                <span>60</span>
+
+            </div>
+             <div class="card-info">
+
+             <h3>📜 Histórico</h3>
+
+             <div id="historicoMensagens">
+ 
+             Nenhuma mensagem enviada.
+
+             </div>
+
+             </div>
+
+             <button onclick="abrirNovaMensagem()">
+                📦 Nova Mensagem
+             </button>
+             <button onclick="abrirSobreProjeto()">
+                Sobre o Projeto 
+             </button>
+             <button onclick="abrirSobreCriador()">
+                Sobre o Criador
+             </button>
+             
+            </div>
+
+        <!-- NOVA MENSAGEM -->
+
+        <div id="novaMensagem" style="display: none;">
+
+            <h2>📦 Nova Mensagem</h2>
+
+            <label>Bloco</label>
+
+            <select id="bloco"></select>
+
+            <label>Apartamento</label>
+
+            <select id="apartamento"></select>
+
+            <label>Telefone</label>
+
+            <input
+                type="text"
+                id="telefone"
+                placeholder="Telefone do morador"
+                >
+                <small>
+                    Caso necessário, o telefone pode ser alterado manualmente para testes.
+                </small>
+
+            <label>Tipo de Aviso</label>
+
+            <select id="tipoAviso">
+
+                <option>📦 Delivery chegou</option>
+
+                <option>👤 Visitante chegou</option>
+
+                <option>⚠️ Aviso Geral</option>
+
+            </select>
+
+            <button onclick="enviarMensagem()">
+                Enviar Mensagem
+            </button>
+
+            <button onclick="voltarDashboard()">
+                ⬅️ Voltar
+            </button>
+
+        </div>
+
+    </div>
+    <div id="sobreProjeto" style="display: none;">
+        <h2> Sobre o Projeto</h2>
+
+        <p>
+            CondoNotify é um app de comunicação
+            condominial para facilitar 
+            a comunicação entre portaria e moradores.
+        </p>
+        
+        <p>
+            O app permite o envio rápido de avisos,
+            notificações de delivery, visitantes e 
+            comunicações gerais através de whatsapp.
+        </p>
+        <p>
+            O objetivo é melhorar a organização,
+            segurança e praticidade na rotina do condomínio.
+        </p>
+        <button onclick="voltarDashboard()">
+            Voltar
+        </button>
+    </div>
+    <div id="sobreCriador" style="display: none;">
+
+    <h2>👨‍💻 Sobre o Criador</h2>
+
+    <p>
+        Nome: Henrique Freire
+    </p>
+
+    <p> 
+        Matrícula: 202402438166
+    </p>
+
+    <p>
+        Curso: Análise e Desenvolvimento de Sistemas
+    </p>
+
+    <p>
+        Projeto desenvolvido como atividade acadêmica,
+        aplicando conceitos de HTML, CSS e JavaScript.
+    </p>
+
+    <p>
+        O objetivo do app é demonstrar a criação
+        de uma solução simples e funcional para
+        comunicação condominial.
+    </p>
+
+    <button onclick="voltarDashboard()">
+        ⬅ Voltar
+    </button>
+
+ </div>
+
+ <button id="chatbotBtn" onclick="abrirChatbot()">
+    💬
+ </button>
+
+ <div id="chatbot" style="display:none;">
+
+    <h3> 💬 CondoBot</h3>
+
+     <div id="chatArea">
+
+        Olá! Como posso ajudar?
+
+     </div>
+
+     <input
+        type="text"
+        id="pergunta"
+        placeholder="Digite sua pergunta">
+
+     <button onclick="responderBot()">
+        Enviar
+     </button>
+
+     <button onclick="fecharChatbot()">
+        Fechar
+     </button>
+
+ </div>
+
+    <script src="script.js"></script>
+
+ </body>
+
+</html>

@@ -1,0 +1,192 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: #0F172A;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+}
+
+small {
+    display: block;
+    margin-top: 5px;
+    color: #94A3B8 ;
+    font-size: 12px;
+}
+.container {
+
+    width: 90%;
+
+    max-width: 400px;
+
+    margin: 50px auto;
+
+    background-color: #1E293B;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    text-align: center;
+}
+
+select {
+
+    width: 100%;
+
+    padding: 12px;
+
+    margin-top: 10px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #334155;
+
+    color: white;
+
+    font-size: 16px;
+
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+
+p {
+    color: #94A3B8;
+}
+
+input,
+button{
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input {
+    background-color: #334155;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #6ac8f3;
+    
+}
+
+.card-info {
+
+    background-color: #334155;
+
+    margin-top: 15px;
+
+    padding: 15px;
+
+    border-radius: 10px;
+}
+
+.card-info h3 {
+
+    margin: 0;
+
+    font-size: 16px;
+}
+
+.card-info span {
+
+    display: block;
+
+    margin-top: 10px;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    color: #60A5FA;
+}
+
+#chatbotBtn {
+
+    position: fixed;
+
+    bottom: 20px;
+
+    right: 20px;
+
+    width: 60px;
+
+    height: 60px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    font-size: 24px;
+
+    cursor: pointer;
+}
+
+#chatbot {
+
+    position: fixed;
+
+    bottom: 90px;
+
+    right: 20px;
+
+    width: 300px;
+
+    background: #1E293B;
+
+    padding: 15px;
+
+    border-radius: 15px;
+
+    color: white;
+
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+#chatArea {
+
+    height: 150px;
+
+    overflow-y: auto;
+
+    margin-bottom: 10px;
+
+    border: 1px solid #334155;
+
+    padding: 10px;
+
+    border-radius: 10px;
+    
+    background-color: #0F172A;
+}
+
+#chatbotBtn {
+
+    background-color: #3B82F6;
+
+    color: white;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+#chatbotBtn:hover {
+
+    transform: scale(1.1);
+
+    transition: 0.3s;
+}
